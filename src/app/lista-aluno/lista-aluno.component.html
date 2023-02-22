@@ -1,18 +1,25 @@
+<div  class="container" fxLayoutAlign="end center">
+  <a class="mat-elevation-z8" mat-stroked-button href="https://www.google.com/" target="_blank">Voltar a tela Principal</a>
+</div>
+
 <div class="container" fxLayout="column" fxLayoutAlign="space-between">
 
+  <mat-card class="mat-elevation-z8">Alunos</mat-card>
+  <br>
   <div fxLayout="row" fxLayoutAlign="end center">
     <mat-form-field>
-      <mat-label>Legacy form field</mat-label>
-      <input matInput placeholder="Placeholder" />
+      <mat-label>Pesquisar Aluno</mat-label>
+      <input matInput placeholder="Pâmela" />
       <mat-icon matSuffix>search</mat-icon>
     </mat-form-field>
 
-    <button mat-mini-fab color="accent">
+
+    <button  (click)="abreModal()" mat-icon-button>
       <mat-icon>add</mat-icon>
     </button>
   </div>
 
-
+<br>
   <div fxLayout="row">
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 tabela-grande">
 

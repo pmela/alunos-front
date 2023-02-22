@@ -1,17 +1,26 @@
+<div  class="container" fxLayoutAlign="end center">
+  <a class="mat-elevation-z8" mat-stroked-button href="https://www.google.com/" target="_blank">Voltar a tela Principal</a>
+  <a class="mat-elevation-z8" mat-stroked-button href="https://www.google.com/" target="_blank">Voltar a tela de Alunos</a>
+
+</div>
+
+
 <div class="container" fxLayout="column" fxLayoutAlign="space-between">
 
+  <mat-card class="mat-elevation-z8">Situação do Aluno X</mat-card>
+  <br>
   <div fxLayout="row" fxLayoutAlign="end center">
     <mat-form-field>
-      <mat-label>Legacy form field</mat-label>
-      <input matInput placeholder="Placeholder" />
+      <mat-label>Pesquisar Matéria</mat-label>
+      <input matInput placeholder="Pâmela" />
       <mat-icon matSuffix>search</mat-icon>
     </mat-form-field>
 
-    <button mat-mini-fab color="accent">
+
+    <button  (click)="abreModalMateria()" mat-icon-button>
       <mat-icon>add</mat-icon>
     </button>
   </div>
-
 
   <div fxLayout="row">
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 tabela-grande">

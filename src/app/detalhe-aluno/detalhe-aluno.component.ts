@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalaAddMateriaNotaComponent } from '../modala-add-materia-nota/modala-add-materia-nota.component';
 import { Aluno } from '../models';
 
 @Component({
@@ -11,9 +13,13 @@ export class DetalheAlunoComponent implements OnInit {
   dataSource: Aluno[] = []
 
 
-  constructor() { }
+  constructor(private dialog:MatDialog) { }
 
   ngOnInit(): void {
   }
-
+  abreModalMateria() {
+    this.dialog.open(ModalaAddMateriaNotaComponent,{
+      width: '40em'
+    });
+  }
 }
